@@ -2,23 +2,23 @@ const logicOfGame = {
     /**
      * Generuje stan początkowy gry.
      */
-    generateInitialState() {},
+    generateInitialState() { },
     /**
      * Funkcja oceny, która ocenia z punktu widzenia wskazanego gracza.
      */
-    evaluateState(state, player) {},
+    evaluateState(state, player) { },
     /**
      * Funkcja generująca możliwe ruchy z wskazanego stanu dla gracza.
      */
-    generateMoves(state, player) {},
+    generateMoves(state, player) { },
     /**
      * Funkcja generuje stan po wykonaniu wskazanego ruchu.
      */
-    generateStateAfterMove(previousState, player, move) {},
+    generateStateAfterMove(previousState, player, move) { },
     /**
      * Funkcja sprawdza czy stan jest terminalny, tzn. koniec gry.
      */
-    isStateTerminal(state, player) {},
+    isStateTerminal(state, player) { },
     /**
      * Funkcja generująca unikalny klucz dla wskazanego stanu.
      */
