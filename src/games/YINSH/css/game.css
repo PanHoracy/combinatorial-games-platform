@@ -5,38 +5,58 @@
     grid-template-columns: repeat(11, 47px);
     grid-template-rows: repeat(19, 40px);
     column-gap: 20px; /* odstêpy miêdzy komórkami */
-    border: 2px solid #333; /* kolor obramowania planszy */
-    place-items: center; /* Centrowanie wertykalne i horyzontalne */
+    
+   place-items: center; /* Centrowanie wertykalne i horyzontalne */
     
 }
 
 .dot {
-    
     width: 10px;
     height: 10px;
     background-color: #000; /* kolor kropki */
     border-radius: 50%; /* aby uzyskaæ kszta³t kropki */
-   
+    position: static;
     cursor: pointer; /* kursor wskazuj¹cy na to, ¿e mo¿na klikn¹æ */
+    display:flex;
 }
-    
+
 
 .blankdot {
-    width: 10px;
-    height: 10px;
-    background-color: white; /* kolor kropki */
-    border-radius: 50%; /* aby uzyskaæ kszta³t kropki */
-    
-    
+    background-color: white;
+    border: none;
 }
 
-.ring {
-    width: 8px;
-    height: 8px;
-    background-color: #000; /* kolor punktu */
-    border-radius: 50%; /* aby uzyskaæ kszta³t ko³a */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#blue-ring {
+    display: inline;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: 2px solid #0000FF;
+    border-radius: 50%;
+    position: absolute; /* Absolutna pozycja wewn¹trz .dot */
+    flex:1;
+
+    
+}
+#orange-ring {
+    display: inline;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: 2px solid #ffa500;
+    border-radius: 50%;
+    position: absolute; /* Absolutna pozycja wewn¹trz .dot */
+    flex: 1;
+    z-index: 3;
+}
+
+
+.board div.highlighted {
+    background-color: red;
+}
+.board div.highlighted2 {
+    background-color: red;
+}
+.board div[data-available="false"] {
+    background-color: gray;
 }
